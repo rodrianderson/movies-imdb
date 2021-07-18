@@ -1,0 +1,90 @@
+<main role="main" *ngIf="data != undefined">
+
+  <div class="container">
+    <div class="row">
+      <div class="ml-auto mr-auto">
+        <mat-icon class="icon-logo" svgIcon="logo"></mat-icon><br>
+        <mat-icon [routerLink]="['/search', {'imdbID': data?.imdbID, 'fav': data?.isFav}]" class="icon-arrow" svgIcon="arrow-grey"></mat-icon><br> 
+        <mat-card class="detail">
+          <div class="div-table">
+            <div class="time-title" *ngIf="data?.Runtime && data?.Runtime !== 'N/A'">{{ data?.Runtime }} • {{ data?.Year }} •
+              <div class="rectangle"><span class="rectangle-title">R</span></div>
+            </div> 
+          </div>
+          <table>
+            <tr>
+              <td>           
+                <mat-card-header>                           
+                    <mat-card-subtitle>
+                      <mat-card-title class="title">{{ data?.Title }}</mat-card-title>                       
+
+                      <div class="div-table">
+                        <div *ngIf="data?.isFav == 'false'" class="hart" (click)="addFav(data, 'true')">
+                          <mat-icon class="icon-hart " svgIcon="heart-grey"></mat-icon>                
+                          <span class="add-hart">Add to favourites</span>
+                        </div>
+                        <div *ngIf="data?.isFav == 'true'"  class="hart-add" (click)="addFav(data, 'false')" >
+                          <mat-icon class="icon-hart" svgIcon="heart-full"></mat-icon>                
+                          <span class="add-hart-full">Added</span>
+                        </div>
+                        <div class="rectangle-rotten-tomatoes">
+                          <span class="imdb-rating">{{ rating?.rotten?.Value }}</span>
+                          <div class="rotten-tomatoes-description">
+                            <mat-icon class="icon-rotten-tomatoes" svgIcon="logo-rotten-tomatoes"></mat-icon>                
+                          </div>
+                        </div>
+
+                        <div class="rectangle-imdb">
+                          <span class="imdb-rating">{{ rating?.imdb.Value }}</span>
+                          <div class="imdb-description">
+                            <mat-icon class="icon-imdb" svgIcon="logo-imdb"></mat-icon>                       
+                          </div>                      
+                        </div>                                                  
+                      </div>                
+                    </mat-card-subtitle>  
+                </mat-card-header>     
+
+                <div style="margin: 21px 0px 39px -7px;" *ngIf="data?.Plot && data?.Plot !== 'N/A'">
+                  <em class="content-tittle">Plot</em>
+                  <p>{{ data?.Plot }}</p>
+                </div> 
+                
+                <mat-grid-list cols="3" rowHeight="3:1">
+                  <mat-grid-tile>
+                    <div *ngIf="data?.Director && data?.Director !== 'N/A'">
+                      <em class="content-tittle">Cast</em>
+                      <p>{{ data?.Actors }}</p>
+                    </div>
+                  </mat-grid-tile>
+                  <mat-grid-tile>
+                    <div *ngIf="data?.Writer && data?.Writer !== 'N/A'">
+                      <em class="content-tittle">Genre</em>
+                      <p>{{ data?.Genre }}</p>
+                    </div>
+                  </mat-grid-tile>
+                  <mat-grid-tile>
+                    <div *ngIf="data?.Actors && data?.Actors !== 'N/A'">
+                      <em class="content-tittle">Director</em>
+                      <p>{{ data?.Director}}</p>
+                    </div>    
+                  </mat-grid-tile>
+                  
+                </mat-grid-list>
+              </td>
+              <td>
+
+                <div [ngSwitch]="data?.Poster === 'N/A' || data?.Poster !== 'N/A'">
+                  <img mat-card-imag class="img-responsive" *ngSwitchCase="data?.Poster !== 'N/A'"
+                    src="{{data?.Poster}}">
+                  <img mat-card-imag class="img-responsive" *ngSwitchCase="data?.Poster === 'N/A'"
+                    src="https://placeimg.com/300/415/any">
+                </div>
+              </td>
+            </tr>
+          </table>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+
+</main>

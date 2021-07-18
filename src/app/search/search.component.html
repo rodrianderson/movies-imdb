@@ -1,0 +1,40 @@
+<main role="main">
+
+  <div class="container">
+
+    <div class="row">
+      <mat-icon class="icon-logo" svgIcon="logo"></mat-icon>
+      <input matInput class="search-input" placeholder="Search movies..." [formControl]="searchFormControl" type="text"
+        autocomplete="off" autofocus>
+      <mat-icon class="icon-magnifier-grey" svgIcon="magnifier-grey"></mat-icon>
+      <br>
+    </div>
+
+    <div *ngIf="empty" class="div-table ">
+      <mat-icon class="empty" svgIcon="empty">
+      </mat-icon>
+      <span class="content-tittle">Don’t know what to <br>search?</span>
+      <span class="content-sub-tittle">Here’s an offer you can’t refuse</span>
+    </div>
+    
+    <div *ngIf="isDone" class="row row-card">
+
+      <mat-grid-list cols="5" *ngFor="let movie of movies; let index=index" (mouseover)="hoveredIndex=index"
+        (mouseleave)="hoveredIndex=-1">
+        <mat-card class="link" [ngSwitch]="movie.Poster === 'N/A' || movie.Poster !== 'N/A'">
+          <img mat-card-imag (click)="gotoDetails(movie)" class="img-responsive" *ngSwitchCase="movie.Poster !== 'N/A'"
+            src="{{movie.Poster}}">
+          <img mat-card-imag (click)="gotoDetails(movie)" class="img-responsive" *ngSwitchCase="movie.Poster === 'N/A'"
+            src="http://www.novelupdates.com/img/noimagefound.jpg">
+          <div *ngIf="index==hoveredIndex" class="div-title">{{movie?.Title}} <div style="text-align: justify;">
+              {{movie?.Year}}</div>
+          </div>
+          <div *ngIf="index==hoveredIndex" (click)="movie.isFav = !movie.isFav; addFavorite(movie, index)"
+            [ngStyle]="getMyStyles(movie.isFav)">
+          </div>
+        </mat-card>
+
+      </mat-grid-list>
+    </div>
+  </div>
+</main>

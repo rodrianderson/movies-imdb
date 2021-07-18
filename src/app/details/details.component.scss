@@ -1,0 +1,215 @@
+.detail {
+  background-color: #0A1014;
+}
+
+td {
+  vertical-align: top;
+  padding: 12px;
+  color: white;
+}
+
+.mat-card {
+  margin: 24px;
+}
+
+.img-responsive {
+  border-radius: 8px;
+  box-shadow: 0 4px 30px 0 rgba(5, 10, 13, 0.6);
+}
+
+.icon-logo {
+  margin-top: 20px;
+  margin-left: 43px;
+  height: 32px;
+  width: 110px;
+}
+
+.icon-arrow {
+  margin-top: 20px;
+  margin-left: 45px;
+  height: 24px;
+  width: 24px;
+  cursor: pointer; 
+}
+
+.icon-heart-white {
+  position:absolute;
+  top:50%;
+  left:50%;
+  -webkit-transform:translate3d(-50%, -50%, 0);
+  -moz-transform:translate3d(-50%, -50%, 0);
+  transform:translate3d(-50%, -50%, 0);
+}
+
+.time-title {
+  color: #7A8C99;
+  font-family: Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.22px;
+  line-height: 24px;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.div-table {
+  display: table; 
+  margin-left: -40px;
+}
+
+.rectangle {
+  background-color: #7A8C99;
+  border-radius: 4px;
+  width: 23px;
+  height: 28px;
+  float: right;
+  margin: 0px 5px;
+}
+
+.rectangle-title {
+  color: #0A1014;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.17px;
+  line-height: 20px;
+  margin-left: 6px;
+}
+
+.title {
+  color: #FFFFFF;
+  font-family: Helvetica;
+  font-size: 80px;
+  font-weight: 400;
+  letter-spacing: 0.87px;
+  line-height: 88px;
+  width: 580px;
+  text-align: left;
+  margin-left: -30px
+}
+
+.rectangle-imdb {
+  background-color: #0A1014;
+  border: 1px solid #353F4C;
+  border-radius: 4px;
+  box-shadow: 0 4px 30px 0 rgba(5, 10, 13, 0.3);
+  width: 118px;
+  height: 40px;
+  float: right;
+  margin-left: 15px; 
+  color: #FFFFFF;
+}
+
+.imdb-description {
+  background-color: #FF9F1C;
+  border-radius: 4px 0 0 4px;
+  width: 53px;
+  height: 38px;
+}
+
+.icon-imdb {
+  width: 37px;
+  height: 16px;
+  margin-left: 8px;
+  margin: 7px 8px;
+}
+
+.imdb-rating {
+  font-size: 16px;
+  float: right;
+  padding: 7px 9px;
+}
+
+
+.rectangle-rotten-tomatoes {
+  background-color: #0A1014;
+  border: 1px solid #353F4C;
+  border-radius: 4px;
+  box-shadow: 0 4px 30px 0 rgba(5, 10, 13, 0.3);
+  width: 87px;
+  height: 40px;
+  float: right;
+  margin-left: 15px;  
+  color: #FFFFFF;
+}
+
+.rotten-tomatoes-description {
+  background-color: #FF4040;
+  border-radius: 4px 0 0 4px;
+  width: 40px;
+  height: 38px;
+}
+
+.icon-rotten-tomatoes {
+  width: 17px;
+  height: 16px;
+  margin-left: 8px;
+  margin: 7px 8px;
+}
+
+.rotten-tomatoes {
+  font-size: 16px;
+  float: right;
+  padding: 7px 9px;
+}
+
+.hart {
+  border: 1px solid #353F4C;
+  border-radius: 4px;
+  width: 182px;
+  height: 40px;
+  float: right;
+  margin-left: 15px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.hart-add {
+  background-color: #FF4040;
+  border: 1px solid #FF4040;
+  border-radius: 4px;
+  width: 104px;
+  height: 40px;
+  float: right;
+  margin-left: 15px;
+  color: #FFFFFF;
+  cursor: pointer; 
+}
+
+
+.icon-hart {
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  margin: 7px 8px;
+}
+
+.add-hart {
+  color: #7A8C99;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.17px;
+  line-height: 19px;
+  text-align: left;
+}
+
+.add-hart-full {
+  color: #FFFFFF;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.17px;
+  line-height: 19px;
+  text-align: left;
+}
+
+.content-tittle {
+  color: #7A8C99;
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.17px;
+  line-height: 24px;
+  text-align: left;
+}
